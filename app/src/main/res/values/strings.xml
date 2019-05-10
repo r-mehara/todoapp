@@ -32,6 +32,7 @@
     <string name="successfully_saved_task_message">TO-DO saved</string>
     <string name="list_title">TO-DO List</string>
     <string name="statistics_title">Statistics</string>
+    <string name="calculator_title">Calculator</string>
     <string name="statistics_no_tasks">You have no tasks.</string>
     <string name="statistics_active_tasks">Active tasks: %d</string>
     <string name="statistics_completed_tasks">Completed tasks: %d</string>
