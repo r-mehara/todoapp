@@ -97,6 +97,7 @@ class TasksActivity : AppCompatActivity(), TaskItemNavigator, TasksNavigator {
                 R.id.list_navigation_menu_item -> {
                     // Do nothing, we're already on that screen
                 }
+                //test
                 R.id.statistics_navigation_menu_item -> {
                     val intent = Intent(this@TasksActivity, StatisticsActivity::class.java).apply {
                         addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
