@@ -1,10 +1,9 @@
 package com.example.android.architecture.blueprints.todoapp.calculator
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.android.architecture.blueprints.todoapp.R
 import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity;
-import com.example.android.architecture.blueprints.todomvvmlivekotlin.mock.R
-
 import kotlinx.android.synthetic.main.activity_calculator.*
 
 class CalculatorActivity : AppCompatActivity() {
@@ -14,10 +13,10 @@ class CalculatorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_calculator)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
+        /*fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
-        }
+        }*/
     }
 
 }
