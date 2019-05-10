@@ -61,5 +61,6 @@
     <string name="no_data_description" />
     <string name="title_activity_calculator">CalculatorActivity</string>
     <string name="formula_text" />
+    <string name="title_activity_calc_result">CalcResultActivity</string>
 
 </resources>
