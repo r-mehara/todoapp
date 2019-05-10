@@ -104,7 +104,7 @@ class TasksActivity : AppCompatActivity(), TaskItemNavigator, TasksNavigator {
                     }
                     startActivity(intent)
                 }
-                R.id.statistics_navigation_menu_item -> {
+                R.id.calculator_navigation_menu_item -> {
                     val intent = Intent(this@TasksActivity, StatisticsActivity::class.java).apply {
                         addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     }
