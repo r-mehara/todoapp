@@ -62,5 +62,6 @@
     <string name="title_activity_calculator">CalculatorActivity</string>
     <string name="formula_text" />
     <string name="title_activity_calc_result">CalcResultActivity</string>
+    <string name="formyla_text" />
 
 </resources>
