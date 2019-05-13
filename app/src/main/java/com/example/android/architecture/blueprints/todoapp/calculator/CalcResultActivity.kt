@@ -1,11 +1,11 @@
 package com.example.android.architecture.blueprints.todoapp.calculator
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.android.architecture.blueprints.todoapp.R
-
 import kotlinx.android.synthetic.main.activity_calc_result.*
+
 
 class CalcResultActivity : AppCompatActivity() {
 
@@ -14,6 +14,9 @@ class CalcResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_calc_result)
         setSupportActionBar(toolbar)
 
+        val text = intent.getStringExtra("CALC_RESULT")
+        val calcView = findViewById<TextView>(R.id.calc_result)
+        calcView.text = text
 
 
     }

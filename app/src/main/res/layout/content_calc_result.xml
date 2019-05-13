@@ -21,13 +21,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/ConstraintLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/calc_result"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/formula_text"/>
+            android:text="@string/calc_result"
+            android:textSize="36sp" />
 
     </LinearLayout>
 
