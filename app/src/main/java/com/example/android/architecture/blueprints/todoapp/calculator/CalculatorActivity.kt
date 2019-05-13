@@ -1,6 +1,7 @@
 package com.example.android.architecture.blueprints.todoapp.calculator
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android.architecture.blueprints.todoapp.R
@@ -23,6 +24,14 @@ class CalculatorActivity : AppCompatActivity() {
             setTitle(R.string.calculator_title)
             setHomeAsUpIndicator(R.drawable.ic_menu)
             setDisplayHomeAsUpEnabled(true)
+        }
+
+
+        setContentView(R.layout.activity_calculator)
+
+        next.setOnClickListener {
+            val intent = Intent(this, CalcResultActivity::class.java)
+            startActivity(intent)
         }
 
         num0.setOnClickListener {
@@ -94,21 +103,25 @@ class CalculatorActivity : AppCompatActivity() {
             addList(nStr,'+')                 //後述、nStrを小数に変換しnListに入れ、"+"をoListに入れる。
             nStr = ""                         //nStrを空に戻す
         }
+
         subtract.setOnClickListener {
             formula.text = "${formula.text}-"
             addList(nStr,'-')
             nStr = ""
         }
+
         multiply.setOnClickListener {
             formula.text = "${formula.text}*"
             addList(nStr,'*')
             nStr = ""
         }
+
         divide.setOnClickListener {
             formula.text = "${formula.text}/"
             addList(nStr,'/')
             nStr = ""
         }
+
         delete.setOnClickListener {
             var formulaStr = formula.text.toString()
             if (!formulaStr.isEmpty()) {
@@ -118,12 +131,15 @@ class CalculatorActivity : AppCompatActivity() {
                 nStr = nStr.substring(0, nStr.lastIndex)
             }
         }
+
         percent.setOnClickListener {
             formula.text = "${formula.text}%"
         }
+
         sign.setOnClickListener {
 
         }
+
         clear.setOnClickListener {
             formula.text = ""
             nStr = ""
