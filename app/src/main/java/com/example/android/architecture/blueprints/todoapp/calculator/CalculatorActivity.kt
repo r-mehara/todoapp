@@ -138,7 +138,10 @@ class CalculatorActivity : AppCompatActivity() {
         }
 
         sign.setOnClickListener {
-
+            var formulaStr=formula.text.toString()
+            if(!formulaStr.isEmpty()){
+                formula.text="-${formula.text}"
+            }
         }
 
         clear.setOnClickListener {
