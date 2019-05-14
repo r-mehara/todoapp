@@ -31,7 +31,7 @@ class CalculatorActivity : AppCompatActivity() {
 
         next.setOnClickListener {
             val intent = Intent(this, CalcResultActivity::class.java)
-            intent.putExtra("CALC_RESULT", formula.text)
+            intent.putExtra("CALC_RESULT", formula.text.toString())
             startActivity(intent)
         }
 
