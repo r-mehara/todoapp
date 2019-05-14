@@ -36,53 +36,98 @@ class CalculatorActivity : AppCompatActivity() {
         }
 
         num0.setOnClickListener {
-            formula.text = "${formula.text}0" //表示する数式に0を追加
-            nStr += "0"                       //数字の文字列に0を追加
+            if(formula.text!="0") {
+                formula.text = "${formula.text}0" //表示する数式に0を追加
+                nStr += "0"                       //数字の文字列に0を追加
+            }
         }
 
         num1.setOnClickListener {
-            formula.text = "${formula.text}1" //表示する数式に1を追加
-            nStr += "1"
+            if(formula.text=="0") { //値が0の場合
+                formula.text = "1" //表示する数式を1に置換
+                nStr = "1"  //数字の文字列を1に置換
+            }else{
+                formula.text="${formula.text}1" //表示する数式に1を追加
+            }
         }
 
         num2.setOnClickListener {
-            formula.text = "${formula.text}2"
-            nStr += "2"
+            if(formula.text=="0"){
+                formula.text="2"
+                nStr="2"
+            }else {
+                formula.text = "${formula.text}2"
+                nStr += "2"
+            }
         }
 
         num3.setOnClickListener {
-            formula.text = "${formula.text}3"
-            nStr += "3"
+            if(formula.text=="0"){
+                formula.text="3"
+                nStr="3"
+            }else {
+                formula.text = "${formula.text}3"
+                nStr += "3"
+            }
         }
 
         num4.setOnClickListener {
-            formula.text = "${formula.text}4"
-            nStr += "4"
+            if(formula.text=="0"){
+                formula.text="4"
+                nStr="4"
+            }else {
+                formula.text = "${formula.text}4"
+                nStr += "4"
+            }
         }
 
         num5.setOnClickListener {
-            formula.text = "${formula.text}5"
-            nStr += "5"
+            if(formula.text=="0"){
+                formula.text="5"
+                nStr="5"
+            }else {
+                formula.text = "${formula.text}5"
+                nStr += "5"
+            }
         }
 
         num6.setOnClickListener {
-            formula.text = "${formula.text}6"
-            nStr += "6"
+            if(formula.text=="0"){
+                formula.text="6"
+                nStr="6"
+            }else {
+                formula.text = "${formula.text}6"
+                nStr += "6"
+            }
         }
 
         num7.setOnClickListener {
-            formula.text = "${formula.text}7"
-            nStr += "7"
+            if(formula.text=="0"){
+                formula.text="7"
+                nStr="7"
+            }else {
+                formula.text = "${formula.text}7"
+                nStr += "7"
+            }
         }
 
         num8.setOnClickListener {
+            if(formula.text=="0"){
+                formula.text="8"
+                nStr="8"
+            }
             formula.text = "${formula.text}8"
             nStr += "8"
         }
 
         num9.setOnClickListener {
-            formula.text = "${formula.text}9"
-            nStr += "9"
+            if(formula.text=="0"){
+                formula.text="9"
+                nStr="9"
+            }else {
+                formula.text = "${formula.text}9"
+                nStr += "9"
+            }
         }
         point.setOnClickListener {
             formula.text = "${formula.text}."
@@ -147,7 +192,7 @@ class CalculatorActivity : AppCompatActivity() {
         }
 
         clear.setOnClickListener {
-            formula.text = ""
+            formula.text = "0"
             nStr = ""
             nList.clear()
             oList.clear()

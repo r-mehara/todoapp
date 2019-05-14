@@ -61,7 +61,7 @@
     <string name="no_data_description" />
     <string name="title_activity_calculator">CalculatorActivity</string>
     <string name="title_activity_calc_result">CalcResultActivity</string>
-    <string name="formula_text"/>
+    <string name="formula_text">0</string>
     <string name="calc_result" />
 
     <drawable name="imgView" />
