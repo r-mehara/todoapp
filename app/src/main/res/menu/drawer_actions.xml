@@ -26,7 +26,7 @@
         android:title="@string/statistics_title" />
     <item
         android:id="@+id/calculator_navigation_menu_item"
-        android:icon="@drawable/ic_statistics"
+        android:icon="@drawable/ic_baseline_dialpad_24px"
         android:title="@string/calculator_title" />
 
 </menu>

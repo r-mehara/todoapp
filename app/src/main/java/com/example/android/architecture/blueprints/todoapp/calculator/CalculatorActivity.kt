@@ -135,13 +135,20 @@ class CalculatorActivity : AppCompatActivity() {
 
         percent.setOnClickListener {
             formula.text = "${formula.text}%"
+/*
+            addList(nStr, '*')
+            nStr+="0.01"
+*/
         }
 
         sign.setOnClickListener {
-            var formulaStr=formula.text.toString()
+            /*var formulaStr=formula.text.toString()
             if(!formulaStr.isEmpty()){
                 formula.text="-${formula.text}"
-            }
+                var num :Double= nList[0]
+                num *= -1
+                nList.set(0, num)
+            }*/
         }
 
         clear.setOnClickListener {
@@ -199,6 +206,6 @@ class CalculatorActivity : AppCompatActivity() {
         }
 
         return result
-    }// end fun calcualte
+    }// end fun calculate
 
 }
