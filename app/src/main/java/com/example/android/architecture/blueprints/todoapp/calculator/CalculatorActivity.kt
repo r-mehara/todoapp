@@ -142,13 +142,8 @@ class CalculatorActivity : AppCompatActivity() {
         }
 
         sign.setOnClickListener {
-            /*var formulaStr=formula.text.toString()
-            if(!formulaStr.isEmpty()){
-                formula.text="-${formula.text}"
-                var num :Double= nList[0]
-                num *= -1
-                nList.set(0, num)
-            }*/
+            formula.text = "-${formula.text}"
+            nList.set(0,nList.get(0) * -1)
         }
 
         clear.setOnClickListener {
