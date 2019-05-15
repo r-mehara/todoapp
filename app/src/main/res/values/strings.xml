@@ -64,5 +64,5 @@
     <string name="formula_text">0</string>
     <string name="calc_result" />
 
-    <drawable name="imgView" />
+    <drawable name="imgView"/>
 </resources>

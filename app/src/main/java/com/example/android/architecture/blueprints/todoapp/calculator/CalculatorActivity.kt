@@ -30,9 +30,26 @@ class CalculatorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_calculator)
 
         next.setOnClickListener {
-            val intent = Intent(this, CalcResultActivity::class.java)
-            intent.putExtra("CALC_RESULT", formula.text.toString())
-            startActivity(intent)
+            if(oList.size==0) {
+                //equalの処理
+                formula.text = "${formula.text}="
+                addList(nStr)
+                var result = calculate().toString()
+                formula.text = result
+                nStr = result
+                nList.clear()
+                oList.clear()
+
+                //nextの処理
+                val intent = Intent(this, CalcResultActivity::class.java)
+                intent.putExtra("CALC_RESULT", formula.text.toString())
+                startActivity(intent)
+            }else{
+                //nextの処理
+                val intent = Intent(this, CalcResultActivity::class.java)
+                intent.putExtra("CALC_RESULT", formula.text.toString())
+                startActivity(intent)
+            }
         }
 
         num0.setOnClickListener {
