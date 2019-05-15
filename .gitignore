@@ -1,44 +1,69 @@
-.DS_Store
-.idea/shelf
-/android.tests.dependencies
-/confluence/target
-/dependencies/repo
-/dist
-/local
-/gh-pages
-/ideaSDK
-/clionSDK
-/android-studio/sdk
+# Built application files
+*.apk
+*.ap_
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
 out/
-/tmp
-workspace.xml
-*.versionsBackup
-/idea/testData/debugger/tinyApp/classes*
-/jps-plugin/testData/kannotator
-/js/js.translator/testData/out/
-/js/js.translator/testData/out-min/
+
+# Gradle files
 .gradle/
 build/
-!**/src/**/build
-!**/test/**/build
-*.iml
-!**/testData/**/*.iml
-.idea/libraries/Gradle*.xml
-.idea/libraries/Maven*.xml
-.idea/artifacts/PILL_*.xml
-.idea/modules
-.idea/runConfigurations/JPS_*.xml
-.idea/runConfigurations/PILL_*.xml
-.idea/libraries
-.idea/modules.xml
-.idea/gradle.xml
-.idea/compiler.xml
-.idea/inspectionProfiles/profiles_settings.xml
-.idea/.name
-.idea/artifacts/dist_auto_*
-.idea/artifacts/ideaPlugin.xml
-kotlin-ultimate/
-node_modules/
-.rpt2_cache/
-libraries/tools/kotlin-test-nodejs-runner/lib/
+
+# Local configuration file (sdk path, etc)
 local.properties
+
+# Log Files
+*.log
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+# Intellij
+*.iml
+.idea/caches
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/datasources.xml
+.idea/dataSources.ids
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/assetWizardSettings.xml
+
+# Keystore files
+*.jks
+*.jks.properties
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Freeline
+freeline.py
+freeline/
+freeline_project_description.json

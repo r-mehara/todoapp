@@ -137,7 +137,7 @@ class CalculatorActivity : AppCompatActivity() {
         equal.setOnClickListener {
             formula.text = "${formula.text}="
             addList(nStr)
-            var result = calcualte().toString()
+            var result = calculate().toString()
             formula.text = result
             nStr = result
             nList.clear()
@@ -180,15 +180,15 @@ class CalculatorActivity : AppCompatActivity() {
 
         percent.setOnClickListener {
             formula.text = "${formula.text}%"
-/*
-            addList(nStr, '*')
-            nStr+="0.01"
-*/
+            val result =nList.get(nList.size-1)
+            nList.removeAt(nList.size-1)
+            nList.add(result)
+            nStr=""
         }
 
         sign.setOnClickListener {
             formula.text = "-${formula.text}"
-            nList.set(0,nList.get(0) * -1)
+            /*nList.set(0,nList.get(0) * -1)*/
         }
 
         clear.setOnClickListener {
@@ -219,7 +219,7 @@ class CalculatorActivity : AppCompatActivity() {
         }
     }
 
-    fun calcualte() : Double {
+    fun calculate() : Double {
 
         var i = 0
         while (i < oList.size) {
