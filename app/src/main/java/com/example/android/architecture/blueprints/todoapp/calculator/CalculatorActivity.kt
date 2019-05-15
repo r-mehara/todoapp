@@ -28,9 +28,6 @@ class CalculatorActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
         }
 
-
-        setContentView(R.layout.activity_calculator)
-
         next.setOnClickListener {
             if(oList.isEmpty()) {     //oListの中身が空の時
                 //nextの処理

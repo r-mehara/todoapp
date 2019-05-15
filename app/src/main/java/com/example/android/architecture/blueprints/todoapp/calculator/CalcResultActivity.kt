@@ -24,10 +24,12 @@ class CalcResultActivity : AppCompatActivity() {
         if (n%2==0.0){
             val imageEven = findViewById<ImageView>(R.id.imgView)
             imageEven.setImageResource(R.drawable.even)
-        }else{
+        }else if(n%2==1.0){
             val imageOdd = findViewById<ImageView>(R.id.imgView)
             imageOdd.setImageResource(R.drawable.odd)
-
+        }else{
+            val imageOther = findViewById<ImageView>(R.id.imgView)
+            imageOther.setImageResource(R.drawable.other)
         }
 
     }
