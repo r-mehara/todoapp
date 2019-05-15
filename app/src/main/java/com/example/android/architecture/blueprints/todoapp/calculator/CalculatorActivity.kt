@@ -3,6 +3,8 @@ package com.example.android.architecture.blueprints.todoapp.calculator
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android.architecture.blueprints.todoapp.R
 import com.example.android.architecture.blueprints.todoapp.util.setupActionBar
@@ -59,7 +61,7 @@ class CalculatorActivity : AppCompatActivity() {
             }
         }
 
-/*        val numberClickListener = View.OnClickListener {
+        val numberClickListener = View.OnClickListener {
             val button = it as Button
             if(formula.text=="0"){
                 formula.text=button.text
@@ -78,96 +80,7 @@ class CalculatorActivity : AppCompatActivity() {
         num6.setOnClickListener(numberClickListener)
         num7.setOnClickListener(numberClickListener)
         num8.setOnClickListener(numberClickListener)
-        num9.setOnClickListener(numberClickListener)*/
-
-        num1.setOnClickListener {
-            if (formula.text == "0") { //値が0の場合
-                formula.text = "1" //表示する数式を1に置換
-                nStr = "1"  //数字の文字列を1に置換
-            } else {
-                formula.text = "${formula.text}1" //表示する数式に1を追加
-                nStr +="1"
-            }
-        }
-
-        num2.setOnClickListener {
-            if (formula.text == "0") {
-                formula.text = "2"
-                nStr = "2"
-            } else {
-                formula.text = "${formula.text}2"
-                nStr += "2"
-            }
-        }
-
-        num3.setOnClickListener {
-            if (formula.text == "0") {
-                formula.text = "3"
-                nStr = "3"
-            } else {
-                formula.text = "${formula.text}3"
-                nStr += "3"
-            }
-        }
-
-        num4.setOnClickListener {
-            if (formula.text == "0") {
-                formula.text = "4"
-                nStr = "4"
-            } else {
-                formula.text = "${formula.text}4"
-                nStr += "4"
-            }
-        }
-
-        num5.setOnClickListener {
-            if (formula.text == "0") {
-                formula.text = "5"
-                nStr = "5"
-            } else {
-                formula.text = "${formula.text}5"
-                nStr += "5"
-            }
-        }
-
-        num6.setOnClickListener {
-            if (formula.text == "0") {
-                formula.text = "6"
-                nStr = "6"
-            } else {
-                formula.text = "${formula.text}6"
-                nStr += "6"
-            }
-        }
-
-        num7.setOnClickListener {
-            if (formula.text == "0") {
-                formula.text = "7"
-                nStr = "7"
-            } else {
-                formula.text = "${formula.text}7"
-                nStr += "7"
-            }
-        }
-
-        num8.setOnClickListener {
-            if (formula.text == "0") {
-                formula.text = "8"
-                nStr = "8"
-            }
-            formula.text = "${formula.text}8"
-            nStr += "8"
-        }
-
-        num9.setOnClickListener {
-            if (formula.text == "0") {
-                formula.text = "9"
-                nStr = "9"
-            } else {
-                formula.text = "${formula.text}9"
-                nStr += "9"
-            }
-        }
+        num9.setOnClickListener(numberClickListener)
 
         point.setOnClickListener {
             formula.text = "${formula.text}."
