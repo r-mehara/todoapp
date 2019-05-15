@@ -30,8 +30,13 @@ class CalculatorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_calculator)
 
         next.setOnClickListener {
-            if(oList.size==0) {
-                //equalの処理
+            if(oList.isEmpty()) {     //oListの中身が空の時
+                //nextの処理
+                val intent = Intent(this, CalcResultActivity::class.java)
+                intent.putExtra("CALC_RESULT", formula.text.toString())
+                startActivity(intent)
+            }else{      //oListの中身に演算子がまだある時
+                //equalの処理を先に実行
                 formula.text = "${formula.text}="
                 addList(nStr)
                 var result = calculate().toString()
@@ -40,11 +45,6 @@ class CalculatorActivity : AppCompatActivity() {
                 nList.clear()
                 oList.clear()
 
-                //nextの処理
-                val intent = Intent(this, CalcResultActivity::class.java)
-                intent.putExtra("CALC_RESULT", formula.text.toString())
-                startActivity(intent)
-            }else{
                 //nextの処理
                 val intent = Intent(this, CalcResultActivity::class.java)
                 intent.putExtra("CALC_RESULT", formula.text.toString())
