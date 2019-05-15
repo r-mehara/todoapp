@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.content_calculator.*
 
 class CalculatorActivity : AppCompatActivity() {
 
-    var nStr : String = ""
+    var nStr: String = ""
     val nList = ArrayList<Double>() // 数式に含まれる数を保持する配列
     val oList = ArrayList<Char>() // 数式に含まれるオペレーション（四則演算）を保持する配列
 
@@ -36,99 +36,122 @@ class CalculatorActivity : AppCompatActivity() {
         }
 
         num0.setOnClickListener {
-            if(formula.text!="0") {
+            if (formula.text != "0") {
                 formula.text = "${formula.text}0" //表示する数式に0を追加
                 nStr += "0"                       //数字の文字列に0を追加
             }
         }
 
+/*        val numberClickListener = View.OnClickListener {
+            val button = it as Button
+            if(formula.text=="0"){
+                formula.text=button.text
+                nStr= button.text.toString()
+            }else {
+                formula.text = "${formula.text}${button.text}"
+                nStr += button.text.toString()
+            }
+        }
+
+        num1.setOnClickListener(numberClickListener)
+        num2.setOnClickListener(numberClickListener)
+        num3.setOnClickListener(numberClickListener)
+        num4.setOnClickListener(numberClickListener)
+        num5.setOnClickListener(numberClickListener)
+        num6.setOnClickListener(numberClickListener)
+        num7.setOnClickListener(numberClickListener)
+        num8.setOnClickListener(numberClickListener)
+        num9.setOnClickListener(numberClickListener)*/
+
         num1.setOnClickListener {
-            if(formula.text=="0") { //値が0の場合
+            if (formula.text == "0") { //値が0の場合
                 formula.text = "1" //表示する数式を1に置換
                 nStr = "1"  //数字の文字列を1に置換
-            }else{
-                formula.text="${formula.text}1" //表示する数式に1を追加
+            } else {
+                formula.text = "${formula.text}1" //表示する数式に1を追加
+                nStr +="1"
             }
         }
 
         num2.setOnClickListener {
-            if(formula.text=="0"){
-                formula.text="2"
-                nStr="2"
-            }else {
+            if (formula.text == "0") {
+                formula.text = "2"
+                nStr = "2"
+            } else {
                 formula.text = "${formula.text}2"
                 nStr += "2"
             }
         }
 
         num3.setOnClickListener {
-            if(formula.text=="0"){
-                formula.text="3"
-                nStr="3"
-            }else {
+            if (formula.text == "0") {
+                formula.text = "3"
+                nStr = "3"
+            } else {
                 formula.text = "${formula.text}3"
                 nStr += "3"
             }
         }
 
         num4.setOnClickListener {
-            if(formula.text=="0"){
-                formula.text="4"
-                nStr="4"
-            }else {
+            if (formula.text == "0") {
+                formula.text = "4"
+                nStr = "4"
+            } else {
                 formula.text = "${formula.text}4"
                 nStr += "4"
             }
         }
 
         num5.setOnClickListener {
-            if(formula.text=="0"){
-                formula.text="5"
-                nStr="5"
-            }else {
+            if (formula.text == "0") {
+                formula.text = "5"
+                nStr = "5"
+            } else {
                 formula.text = "${formula.text}5"
                 nStr += "5"
             }
         }
 
         num6.setOnClickListener {
-            if(formula.text=="0"){
-                formula.text="6"
-                nStr="6"
-            }else {
+            if (formula.text == "0") {
+                formula.text = "6"
+                nStr = "6"
+            } else {
                 formula.text = "${formula.text}6"
                 nStr += "6"
             }
         }
 
         num7.setOnClickListener {
-            if(formula.text=="0"){
-                formula.text="7"
-                nStr="7"
-            }else {
+            if (formula.text == "0") {
+                formula.text = "7"
+                nStr = "7"
+            } else {
                 formula.text = "${formula.text}7"
                 nStr += "7"
             }
         }
 
         num8.setOnClickListener {
-            if(formula.text=="0"){
-                formula.text="8"
-                nStr="8"
+            if (formula.text == "0") {
+                formula.text = "8"
+                nStr = "8"
             }
             formula.text = "${formula.text}8"
             nStr += "8"
         }
 
         num9.setOnClickListener {
-            if(formula.text=="0"){
-                formula.text="9"
-                nStr="9"
-            }else {
+            if (formula.text == "0") {
+                formula.text = "9"
+                nStr = "9"
+            } else {
                 formula.text = "${formula.text}9"
                 nStr += "9"
             }
         }
+
         point.setOnClickListener {
             formula.text = "${formula.text}."
             nStr += "."
@@ -146,32 +169,32 @@ class CalculatorActivity : AppCompatActivity() {
 
         add.setOnClickListener {
             formula.text = "${formula.text}+"
-            addList(nStr,'+')                 //後述、nStrを小数に変換しnListに入れ、"+"をoListに入れる。
+            addList(nStr, '+')                 //後述、nStrを小数に変換しnListに入れ、"+"をoListに入れる。
             nStr = ""                         //nStrを空に戻す
         }
 
         subtract.setOnClickListener {
             formula.text = "${formula.text}-"
-            addList(nStr,'-')
+            addList(nStr, '-')
             nStr = ""
         }
 
         multiply.setOnClickListener {
             formula.text = "${formula.text}*"
-            addList(nStr,'*')
+            addList(nStr, '*')
             nStr = ""
         }
 
         divide.setOnClickListener {
             formula.text = "${formula.text}/"
-            addList(nStr,'/')
+            addList(nStr, '/')
             nStr = ""
         }
 
         delete.setOnClickListener {
             var formulaStr = formula.text.toString()
             if (!formulaStr.isEmpty()) {
-                formula.text = formulaStr.subSequence(0,formulaStr.lastIndex)
+                formula.text = formulaStr.subSequence(0, formulaStr.lastIndex)
             }
             if (!nStr.isEmpty()) {
                 nStr = nStr.substring(0, nStr.lastIndex)
@@ -180,10 +203,10 @@ class CalculatorActivity : AppCompatActivity() {
 
         percent.setOnClickListener {
             formula.text = "${formula.text}%"
-            val result =nList.get(nList.size-1)
-            nList.removeAt(nList.size-1)
+            val result = nList.get(nList.size - 1)
+            nList.removeAt(nList.size - 1)
             nList.add(result)
-            nStr=""
+            nStr = ""
         }
 
         sign.setOnClickListener {
@@ -200,7 +223,7 @@ class CalculatorActivity : AppCompatActivity() {
 
     }
 
-    fun addList(str : String, ope : Char) {
+    fun addList(str: String, ope: Char) {
         try {
             var num = str.toDouble()
             nList.add(num)
@@ -210,38 +233,38 @@ class CalculatorActivity : AppCompatActivity() {
         }
     }
 
-    fun addList(str : String) {
+    fun addList(str: String) {
         try {
             var num = str.toDouble()
             nList.add(num)
-        }catch(e:Exception){
+        } catch (e: Exception) {
             formula.text = "Numeric error"
         }
     }
 
-    fun calculate() : Double {
+    fun calculate(): Double {
 
         var i = 0
         while (i < oList.size) {
             //do multiplication and division first
-            if(oList.get(i) == '*' || oList.get(i) == '/') {
-                var result = if (oList.get(i) == '*') nList.get(i) * nList.get(i+1) else nList.get(i) / nList.get(i+1)
-                nList.set(i,result)
-                nList.removeAt(i+1)
+            if (oList.get(i) == '*' || oList.get(i) == '/') {
+                var result = if (oList.get(i) == '*') nList.get(i) * nList.get(i + 1) else nList.get(i) / nList.get(i + 1)
+                nList.set(i, result)
+                nList.removeAt(i + 1)
                 oList.removeAt(i)
                 i--
             }
             // change subtraction to addition
-            else if(oList.get(i) == '-'){
-                oList.set(i,'+')
-                nList.set(i+1,nList.get(i+1) * -1)
+            else if (oList.get(i) == '-') {
+                oList.set(i, '+')
+                nList.set(i + 1, nList.get(i + 1) * -1)
             }
             i++
         }
 
         // get sum
         var result = 0.0
-        for (i in nList){
+        for (i in nList) {
             result += i
         }
 
