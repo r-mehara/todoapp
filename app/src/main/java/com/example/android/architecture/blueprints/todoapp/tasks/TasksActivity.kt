@@ -25,6 +25,7 @@ import androidx.lifecycle.Observer
 import com.example.android.architecture.blueprints.todoapp.Event
 import com.example.android.architecture.blueprints.todoapp.R
 import com.example.android.architecture.blueprints.todoapp.addedittask.AddEditTaskActivity
+import com.example.android.architecture.blueprints.todoapp.calculator.CalculatorActivity
 import com.example.android.architecture.blueprints.todoapp.statistics.StatisticsActivity
 import com.example.android.architecture.blueprints.todoapp.taskdetail.TaskDetailActivity
 import com.example.android.architecture.blueprints.todoapp.util.obtainViewModel
@@ -104,8 +105,8 @@ class TasksActivity : AppCompatActivity(), TaskItemNavigator, TasksNavigator {
                     }
                     startActivity(intent)
                 }
-                R.id.statistics_navigation_menu_item -> {
-                    val intent = Intent(this@TasksActivity, StatisticsActivity::class.java).apply {
+                R.id.calculator_navigation_menu_item -> {
+                    val intent = Intent(this@TasksActivity, CalculatorActivity::class.java).apply {
                         addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     }
                     startActivity(intent)
