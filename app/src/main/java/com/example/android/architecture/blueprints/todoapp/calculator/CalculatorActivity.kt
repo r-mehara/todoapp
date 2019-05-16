@@ -130,9 +130,8 @@ class CalculatorActivity : AppCompatActivity() {
 
         percent.setOnClickListener {
             formula.text = "${formula.text}%"
-            val result = nList.get(nList.size - 1)
-            nList.removeAt(nList.size - 1)
-            nList.add(result)
+            val result = nStr.toDouble() / 100
+            nList.add(nList.size, result)
             nStr = ""
         }
 
