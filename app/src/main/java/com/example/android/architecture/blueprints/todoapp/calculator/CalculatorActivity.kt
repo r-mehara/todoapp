@@ -29,7 +29,7 @@ class CalculatorActivity : AppCompatActivity() {
         }
 
         next.setOnClickListener {
-            if(oList.isEmpty()) {     //oListの中身が空の時
+            if(formula.text.endsWith('=')) {     //oListの中身が空の時
                 //nextの処理
                 val intent = Intent(this, CalcResultActivity::class.java)
                 intent.putExtra("CALC_RESULT", formula.text.toString())
@@ -132,12 +132,16 @@ class CalculatorActivity : AppCompatActivity() {
             formula.text = "${formula.text}%"
             val result = nStr.toDouble() / 100
             nList.add(nList.size, result)
-            nStr = ""
+            nStr=""
         }
 
         sign.setOnClickListener {
             formula.text = "-${formula.text}"
-            /*nList.set(0,nList.get(0) * -1)*/
+/*
+            val result = nStr.toDouble() * -1
+            nList.add(nList.size, result)
+*/
+            nStr=""
         }
 
         clear.setOnClickListener {
