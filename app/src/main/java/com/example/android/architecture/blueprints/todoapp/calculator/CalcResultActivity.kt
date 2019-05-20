@@ -18,12 +18,12 @@ class CalcResultActivity : AppCompatActivity() {
         val text = intent.getStringExtra("CALC_RESULT")
         val calcView = findViewById<TextView>(R.id.calc_result)
         calcView.text = text
-        val n: Double = text.toDouble()
+        val calcResult: Double = text.toDouble()
 
-        if (n%2==0.0){
+        if (calcResult%2==0.0){
             val imageEven = findViewById<ImageView>(R.id.imgView)
             imageEven.setImageResource(R.drawable.even)
-        }else if(n%2==1.0){
+        }else if(calcResult%2==1.0){
             val imageOdd = findViewById<ImageView>(R.id.imgView)
             imageOdd.setImageResource(R.drawable.odd)
         }else{
