@@ -32,7 +32,8 @@
             android:id="@+id/imgView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/imgView" />
+            app:srcCompat="@drawable/imgview"
+            tools:srcCompat="@tools:sample/avatars[2]" />
 
     </LinearLayout>
 

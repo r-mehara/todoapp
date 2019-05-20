@@ -6,7 +6,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android.architecture.blueprints.todoapp.R
 import kotlinx.android.synthetic.main.activity_calc_result.*
-import kotlinx.android.synthetic.main.content_calculator.*
 
 
 class CalcResultActivity : AppCompatActivity() {
