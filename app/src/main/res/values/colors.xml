@@ -18,7 +18,10 @@
     <color name="colorPrimary">#455A64</color>
     <color name="colorPrimaryDark">#263238</color>
     <color name="colorAccent">#D50000</color>
-
+    <color name="colorFontMain">#FFFFFF</color>
+    <color name="colorFontSub">#000000</color>
+    <color name="lightGray">#C0C0C0</color>
+    <color name="darkGray">#404040</color>
     <drawable name="completedTaskBackground">#CCCCCC</drawable>
 
     <drawable name="touchFeedback">#CFD8DC</drawable>
